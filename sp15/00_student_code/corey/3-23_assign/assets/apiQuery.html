@@ -1,0 +1,18 @@
+{{define "apiQuery"}}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Gmail Search</title>
+		<link rel="stylesheet" href="assets/style.css">
+	</head>
+	<body>
+		<h3>Looking for a message in your Gmail?</h3>
+		<p>Enter a topic to search for in your mail. (You will be asked to sign in to your gmail if you are not already)</p>
+		<form accept-charset="utf-8" action="{{.}}" method="post">
+			<input type="text" name="search" placeholder="Search your Gmail..." autofocus />
+			<input type="submit" value="search" />
+		</form>
+	</body>
+</html>
+{{end}}

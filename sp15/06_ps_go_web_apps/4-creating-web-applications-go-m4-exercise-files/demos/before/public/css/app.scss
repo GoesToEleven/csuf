@@ -1,0 +1,98 @@
+@import "./normalize";
+@import "./foundation";
+@import "./_variables";
+@import "./_categories";
+@import "./_menu";
+@import "./_products";
+@import "./_detail";
+@import "./_login";
+@import "./_profile";
+@import "./_standLocator";
+
+
+html {
+    margin: 1em 0 0 0;
+    color: $primary-font-color;
+    font-family: 'Myriad-Pro';
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $secondary-color;
+    font-family: $header-font;
+}
+
+button {
+    margin: 0 1em;
+    border-radius: 1em;
+    color: $secondary-color !important;
+    text-transform: uppercase;
+    font-size: 1em !important;
+}
+
+.secondary-color {
+    color: $secondary-font-color;
+}
+
+.header {
+    padding: 2em;
+}
+
+.logo-container {
+    margin-left: 3%;
+    width: 100%;
+
+    .logo {
+        background-image: url(../img/logo.png);
+        background-size: contain;
+        height: 120px;
+        background-repeat: no-repeat;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+        font-style: italic;
+    }
+}
+
+nav {
+    padding-top: 1em;
+
+    .item {
+        text-align: center;
+        border-right: 1px solid $secondary-color;
+
+        &:last-child {
+            border-right-width: 0;
+        }
+
+        a {
+            color: $secondary-color;
+            text-transform: uppercase;
+            font-family: $header-font;
+
+            &:hover, &.active {
+                &:before {
+                    content: ' ';
+                    background-color: $primary-color;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 1em;
+                    right: 1em;
+                    z-index: -1;
+                    border-radius: 0.5em;
+                }
+            }
+        }
+    }
+}
+
+.social-media {
+    span {
+        text-transform: uppercase;
+        color: $primary-font-color;
+        margin-right: 1em;
+    }
+}

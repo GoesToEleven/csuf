@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+{{template "_head.html" .Title}}
+<body>
+	{{template "_header.html" .Active}}
+	<div class="row stand-locator">
+		<div class="columns small-12">
+			<div class="row">
+				<div class="columns small-6 text-right">Zip Code</div>
+				<div class="columns small-3">
+					<input type="text" name="zipCode" id="zipCode" />
+				</div>
+				<div class="columns small-3">
+					<button class="small" id="search">Find</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="columns small-8 small-offset-2" id="map-canvas"></div>
+				<script type="text/javascript"
+					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7ZIGyruPFDfhdWLPpmvyTQz_JpImnaDI">
+
+				</script>
+				<script type="text/javascript">
+					function initialize() {
+						var mapOptions = {
+							center : {
+								lat : 37.422,
+								lng : -122.084058
+							},
+							zoom : 14
+						};
+						var map = new google.maps.Map(document
+								.getElementById('map-canvas'), mapOptions);
+						document.getElementById("search").addEventListener(
+								"click",
+								function(e) {
+									var xhr = new XMLHttpRequest();
+									xhr.addEventListener("readystatechange", function() {
+										if (xhr.readyState == 4) {
+											var coords = eval(xhr.responseText);
+											coords.forEach(function(coord) {
+												var marker = new google.maps.Marker({
+													position : new google.maps.LatLng(
+															coord.Lat, coord.Lng),
+													title : coord.Title
+												});
+
+												marker.setMap(map);
+											});
+										}
+									}, false);
+									
+									xhr.open("get", "/api/stand_locator", true);
+									xhr.send()
+									
+								}, false);
+					}
+					google.maps.event
+							.addDomListener(window, 'load', initialize);
+				</script>
+			</div>
+		</div>
+	</div>
+	{{template "_footer.html"}}
+</body>
+</html>

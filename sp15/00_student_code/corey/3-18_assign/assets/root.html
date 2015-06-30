@@ -1,0 +1,9 @@
+{{define "title"}}Who is it?{{end}}
+
+{{define "body"}}
+	<p>A knock at the door? Who is it?</p>
+	<form accept-charset="utf-8" action="/response" method="post" >
+		<input name="name" type="text" placeholder="Enter your name here" autofocus required>
+		<input type="submit" value="This is my name">
+	</form>
+{{end}}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+{{template "_head.html" .Title}}
+<body>
+	{{template "_header.html" .Active}}
+	<div class="row">
+		<div class="columns small-12">
+			<ul class="row products small-block-grid-4">
+				{{range .Products}}
+					{{template "_productSummary.html" .}}
+				{{end}}
+			</ul>
+		</div>
+	</div>
+	{{template "_footer.html"}}
+</body>
+</html>

@@ -1,0 +1,11 @@
+{{define "webSubmissionEdit"}}
+    <h1>Edit</h1>
+    <p>Edit your submission</p>
+    <form action="/edit2" method="post">
+        <div>
+            <input type="text" name="link" placeholder="link" id="link">
+        </div>
+        <input type="hidden" name="thread" value="{{.ThreadId}}">
+        <input type="submit" value="Submit">
+    </form>
+{{end}}

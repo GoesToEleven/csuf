@@ -1,0 +1,16 @@
+#tabs {
+  border-bottom: .5em solid #EEEEEE;
+  margin: 0;
+  padding: 0;
+}
+
+#tabs li {
+  display:inline;
+}
+
+#tabs li a {
+  text-decoration: none;
+  padding: 0.25em 1em;
+  color: #000;
+  font-size: 150%;
+}

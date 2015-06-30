@@ -1,0 +1,9 @@
+https://developers.google.com/speed/pagespeed/service
+
+https://developers.google.com/speed/pagespeed/insights/
+
+examples:
+http://invisionweb.us/
+
+
+https://cloud.google.com/appengine/docs/go/config/appconfig#Go_app_yaml_Custom_PageSpeed_configuration

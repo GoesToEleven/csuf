@@ -1,0 +1,37 @@
+{{define "storylist"}}
+    {{if .Stories}}
+        {{range .Stories}}
+            <div>
+                <p>{{.Story.Title}}</p>
+                <a href={{.Story.Link}}>{{.Story.Link}}</a>
+                <p>{{.Story.SubmitDateTime}}</p>
+                <p>{{.Story.SubmitBy}}</p>
+                {{if .ShowEditDelete}}
+                <form action="/edit" method="post">
+                    <input type="hidden" name="thread" value="{{.Story.Thread}}">
+                    <input type="submit" value="edit">
+                </form>
+                <form action="/delete" method="post">
+                    <input type="hidden" name="thread" value="{{.Story.Thread}}">
+                    <input type="submit" value="delete">
+                </form>
+                {{end}}
+                <p>----------------------------------------------------</p>
+            </div>
+        {{end}}
+    {{else}}
+        <p>Nothing here! You have reached the end of the internet...</p>
+    {{end}}
+
+    {{if .BeforeLink}}
+        <div>
+            <a href="/?before={{.BeforeLink}}">Prev</a>
+        </div>
+    {{end}}
+
+    {{if .AfterLink}}
+        <div>
+            <a href="/?after={{.AfterLink}}">Next</a>
+        </div>
+    {{end}}
+{{end}}

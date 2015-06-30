@@ -1,0 +1,21 @@
+body {
+  background-color: #CCCCFF;
+  font-family: sans-serif;
+}
+h2 {
+  color: #2A1959;
+  border-bottom: 2px solid #2A1959;
+}
+h3 {
+  color: #474B94;
+  font-size: 1.2em;
+}
+#footer {
+  clear: both;
+  border-top: 1px solid #2A1959;
+  text-align: left; 
+  height: 50px; 
+  font-size: 70%;
+  width: 100%;
+}
+

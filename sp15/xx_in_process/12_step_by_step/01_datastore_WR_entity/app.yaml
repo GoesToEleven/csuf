@@ -1,0 +1,8 @@
+application: onyx-messenger-91915
+version: v1
+runtime: go
+api_version: go1
+
+handlers:
+- url: /.*
+  script: _go_app

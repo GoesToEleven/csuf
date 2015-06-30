@@ -1,0 +1,10 @@
+application: helloworld
+version: 1
+runtime: go
+api_version: go1
+
+handlers:
+- url: /images
+  static_dir: site/images
+- url: /.*
+  script: _go_app

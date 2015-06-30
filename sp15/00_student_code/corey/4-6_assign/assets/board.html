@@ -1,0 +1,24 @@
+{{define "Board"}}
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="UTF-8">
+		<title>Bulletin Board</title>
+	</head>
+
+	<body>
+		<h3>Welcome to the Bulletin Board, {{.User}}</h3>
+		<p>Browse the following posts.</p>
+		{{range .Thread}}
+		<form action="/viewthread" method="post">
+			<p>{{.Post.Message}} by: {{.Post.Author}} on:{{.Post.PostDate}} {{if .Post.UpdateDate}}updated on: {{.}}{{end}}</p>
+			<input name="encoded_key" type="hidden" value="{{.ID}}">
+			<button type="submit">View Thread</button>
+		</form>
+		{{end}}
+		<p><a href="/create">New Thread</a></p>
+	</body>
+
+</html>
+{{end}}

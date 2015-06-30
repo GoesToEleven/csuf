@@ -1,0 +1,24 @@
+# This is a comment
+
+# application is mandatory
+application: rubylearningmsg
+
+# version is mandatory
+version: 2-1
+
+# runtime is mandatory
+runtime: go
+
+# api_version is mandatory
+api_version: go1
+
+# handlers is mandatory
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /.*
+  script: _go_app
+
+  

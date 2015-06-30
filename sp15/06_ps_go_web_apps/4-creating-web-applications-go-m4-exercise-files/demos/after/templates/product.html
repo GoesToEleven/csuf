@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+{{template "_head.html" .Title}}
+<body>
+	{{template "_header.html" .Active}}
+	<div class="row detail">
+		<div class="columns-small-8 small-offset-2">
+			<div class="row">
+				<div class="columns small-4">
+					<img src="/img/{{.Product.ImageUrl}}" alt="{{.Product.ImageUrl}}" />
+				</div>
+				<div class="columns small-8 details">
+					<h2>{{.Product.Name}}</h2>
+					<div class="row">
+						<div class="columns small-3 text-right">
+							Price
+						</div>
+						<div class="columns small-8 small-offset-1">
+							${{.Product.PricePerLiter | printf "%.2f"}} / liter
+						</div>
+					</div>
+					<div class="row">
+						<div class="columns small-8 small-offset-4">
+							${{.Product.PricePer10Liter | printf "%.2f"}} / liter (10 or more)
+						</div>
+					</div>
+					<div class="row">
+						<div class="columns small-3 text-right">
+							Organic
+						</div>
+						<div class="columns small-8 small-offset-1">
+							{{if .Product.IsOrganic}}Yes{{else}}No{{end}}
+						</div>
+					</div>
+					<div class="row">
+						<div class="columns small-3 text-right">
+							Origin
+						</div>
+						<div class="columns small-8 small-offset-1">
+							{{.Product.Origin}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="columns small-10 small-offset-1">
+					<hr/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="columns small-12">
+					<p>
+						{{.Product.DescriptionLong}}
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{template "_footer.html"}}
+</body>
+</html>

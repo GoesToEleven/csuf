@@ -1,0 +1,17 @@
+{{define "results"}}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Gmail Results</title>
+		<link rel="stylesheet" href="assets/style.css">
+	</head>
+	<body>
+		<h3>Here are your search results for {{.Search}}</h3>
+		<ul>{{range .Emails}}
+		<li><a href="{{.}}">{{.}}</a></li>
+		{{end}}
+		</ul>
+	</body>
+</html>
+{{end}}

@@ -1,0 +1,12 @@
+<li class="product">
+	<img src="/img/{{.ImageUrl}}" alt="{{.ImageUrl}}" />
+	<a href="/product">
+		<h3>{{.Name}}</h3>
+	</a>
+	<p>
+		{{.DescriptionShort}} 
+	</p>
+	<p>
+		${{.PricePerLiter | printf "%.2f"}} / liter
+	</p>
+</li>

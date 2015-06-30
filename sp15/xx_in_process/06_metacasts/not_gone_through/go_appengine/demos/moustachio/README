@@ -1,0 +1,8 @@
+This program requires the freetype-go library.
+
+It must be installed into your GOPATH so the relevant package can by
+imported by Moustachio. You can do this by running the following command:
+
+        goapp get code.google.com/p/freetype-go/freetype/raster
+
+Where goapp is the binary in the root of the Go App Engine SDK.

@@ -1,0 +1,31 @@
+{{define "Post"}}
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="UTF-8">
+		<title>Thread</title>
+	</head>
+
+	<body>
+		{{range .Thread}}
+			<form method="post">
+				<p><b>{{.Post.Author}}</b> wrote:</p>
+				{{.Post.Message}}
+				<p><i>posted on {{.Post.PostDate}}</i></p>
+				{{if .Post.UpdateDate}}<p><i>updated on {{.Post.UpdateDate}}</i></p>{{end}}
+				<input name="encoded_key" type="hidden" value={{.ID}}>
+				<button type="submit" formaction="/edit">Edit Post</button>
+				<button type="submit" formaction="/delete">Delete Post</button>
+				<p></p>
+			</form>
+		{{end}}
+		<form method="post" action="/post">
+			<input name="parent_key" type="hidden" value={{.Parent}}>
+			<button type="submit">New Post</button>
+		</form>
+		<a href="/">Back to Bulletin Board</a>
+	</body>
+
+</html>
+{{end}}

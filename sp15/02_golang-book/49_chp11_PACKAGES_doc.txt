@@ -1,0 +1,33 @@
+Documentation
+
+Go has the ability to automatically generate documentation for packages
+in a similar way to the standard package documentation.
+
+In a terminal run this command:
+godoc your/path/math Average
+
+godoc github.com/goestoeleven/golang-book/PACKAGES/math Average
+
+You should see information displayed for the function we just wrote.
+We can improve this documentation by adding a comment before the function:
+
+// Finds the average of a series of numbers
+func Average(xs []float64) float64 {
+
+If you run go install in the math folder, then re-run the godoc command
+you should see our comment below the function definition.
+
+This documentation is also available in web form by running this command:
+
+godoc -http=":6060"
+and entering this URL into your browser:
+
+http://localhost:6060/pkg/
+
+You should be able to browse through all of the packages installed on your system.
+
+-------------
+
+FOR CODE EXAMPLES - SEE THE FOLDER:
+
+Web_Programming_CSUF / src / github.com / goestoeleven / golang-book / PACKAGES / math

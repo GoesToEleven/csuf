@@ -1,0 +1,41 @@
+{% extends "skeleton.html" %}
+{% block page_title %}Logs{% endblock %}
+
+{% block page_head %}
+  <style type="text/css">
+    {% include "instance_logs.css" %}
+  </style>
+{% endblock %}
+
+{% block body %}
+  <h3>
+    Logs for instance
+    {% if module.supports_individually_addressable_instances %}
+      <a href="//{{ module.get_instance_address(instance.instance_id) }}"
+          target="_blank">
+    {% endif %}
+      {{ instance.instance_id }}
+    {% if module.supports_individually_addressable_instances %}
+      </a>
+    {% endif %}
+    of module
+    <a href="//{{ module.balanced_address }}" target="_blank">
+      {{ module.name }}
+    </a>.
+  </h3>
+  <ul id="tabs">
+    <!--TODO(gloom): pass the list of logtypes here, parse 'app'/'appjson'-->
+    {% for log_type in ['request'] %}
+      <li id={{ log_type }}>
+        <a href="/instances/logs?app={{ app }}&module={{ module }}&version={{ version }}&instance={{ instance }}&log_type={{ log_type }}">
+          {{ log_type }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% for l in logs %}
+  <li>
+    {{ l }}
+  </li>
+  {% endfor %}
+{% endblock %}

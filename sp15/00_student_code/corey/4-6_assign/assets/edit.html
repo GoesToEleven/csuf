@@ -1,0 +1,21 @@
+{{define "New"}}
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="UTF-8">
+		<title>{{.Title}}</title>
+	</head>
+
+	<body>
+		<h3>{{.Title}}:</h3>
+		<form method="post">
+			<textarea autofocus rows="4" cols="50" name="message" placeholder="Write your post here...">{{if .Message}}{{.Message}}{{end}}</textarea>
+			{{if .ID}}<input name="encoded_key" type="hidden" value={{.ID}}{{end}}>
+			{{if .Parent}}<input name="parent_key" type="hidden" value={{.Parent}}{{end}}>
+			<button type="submit" formaction="/put">Submit</button>
+		</form>
+	</body>
+
+</html>
+{{end}}

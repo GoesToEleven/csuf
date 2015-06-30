@@ -1,0 +1,310 @@
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/*
+=================
+HEADER
+=================
+*/
+
+header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 8em;
+    margin-bottom: 1em;
+}
+
+ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+li a{
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+h1 {
+    color: dimgray;
+    font-family: sans-serif;
+    font-size: 36px;
+    text-transform: uppercase;
+    padding-bottom: 19px;
+}
+
+header h1 {
+    text-align: center;
+    padding-bottom: 10px;
+    text-decoration: none;
+}
+
+/*
+=================
+MAIN IMAGE
+=================
+*/
+
+div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-align-content: flex-end;
+        -ms-flex-line-pack: end;
+            align-content: flex-end;
+}
+
+figure {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+}
+
+figcaption {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.main-image{
+    width: 100%;
+    height: 400px;
+    background: url("../images/kara1.jpg") center 10% no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.main-image-crop {
+    max-width: 2000px;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+h3 {
+    color: #FFFFFF ;
+    font-family: Helvetica, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 0px;
+}
+
+
+/*
+=================
+ARTICLES
+=================
+*/
+
+section {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+article {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 1000px;
+}
+
+article h1 {
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    padding: 0.2em 0;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.2em;
+    padding-bottom: 10px;
+}
+
+
+.first-letter{
+    font-size:20px;
+}
+
+
+
+
+
+/*
+=====================================================================================
+MEDIA QUERIES
+=====================================================================================
+*/
+
+/*GREATER THAN 768px*/
+@media all and (min-width: 768px) {
+
+    .main-image {
+        width: 100%;
+        height: 400px;
+        background: url("../images/kara1.jpg") center 10% no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+
+    header {
+        height: 5em;
+    }
+
+    header h1 {
+        text-align: center;
+        padding-bottom: 19px;
+        text-decoration: none;
+    }
+
+    ul {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    li a {
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        text-decoration: none;
+        text-transform: capitalize;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+        height: 30px;
+    }
+}
+
+
+/*GREATER THAN 980px*/
+@media all and (min-width: 980px) {
+
+    article h1 {
+        padding-top: 1em;
+    }
+}
+
+/*GREATER THAN 1100px*/
+@media all and (min-width: 1100px) {
+
+    article h1 {
+        padding-top: 2em;
+    }
+}
+
+

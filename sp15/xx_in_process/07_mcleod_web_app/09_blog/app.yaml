@@ -1,0 +1,26 @@
+application: trial3-907
+version: 1
+runtime: go
+api_version: go1
+
+handlers:
+- url: /images
+  static_dir: site/images
+- url: /stylesheets
+  static_dir: site/stylesheets
+- url: /authorized/.*
+  script: _go_app
+  login: required
+  auth_fail_action: redirect
+- url: /admin/.*
+  script: _go_app
+  login: admin
+  auth_fail_action: redirect
+- url: /.*
+  script: _go_app
+
+pagespeed:
+  domains_to_rewrite:
+  - www.trial3-907.appspot.com
+  enabled_rewriters:
+  - MinifyCss

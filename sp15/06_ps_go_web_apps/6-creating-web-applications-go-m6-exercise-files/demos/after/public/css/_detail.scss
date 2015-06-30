@@ -1,0 +1,18 @@
+@import "./_variables";
+
+.detail {
+    h2 {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .details {
+        font-size: 1.2em;
+        font-family: $header-font;
+    }
+
+    p {
+        font-family: $body-font;
+        font-size: 1.2em;
+    }
+}

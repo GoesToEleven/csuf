@@ -1,0 +1,14 @@
+
+Programming is not easy; even the best programmers are incapable of writing
+programs that work exactly as intended every time. Therefore an important part
+of the software development process is testing. Writing tests for our code is a
+good way to ensure quality and improve reliability.
+
+Tests are identified by starting a function with the word Test and taking
+one argument of type *testing.T
+
+-------------
+
+FOR CODE EXAMPLES - SEE THE FOLDER:
+
+Web_Programming_CSUF / src / github.com / goestoeleven / golang-book / PACKAGES / math
